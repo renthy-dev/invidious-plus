@@ -67,6 +67,13 @@
 
 ## Features
 
+**PLUS features**
+- Video chapters (Button located next to CC on video player bar)
+- Sponsorblock
+- Redesigned UI
+-
+- 
+
 **User features**
 - Lightweight
 - No ads
