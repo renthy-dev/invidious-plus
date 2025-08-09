@@ -59,7 +59,7 @@
 
 ## DISCLAIMER:
 
-This fork is not primarily being built for public instances but should still work. I'm adding features that I use for my selfhosted version.
+This fork is not primarily being built for public instances but should still work. I'm adding features that I use for my selfhosted version. Ill try my best to keep the code clean, easy to read with comments so that you can follow the changes.
 
 
 ## Features
