@@ -57,14 +57,10 @@
 </div>
 
 
-## Screenshots
+## DISCLAIMER:
 
-| Player                              | Preferences                         | Subscriptions                         |
-|-------------------------------------|-------------------------------------|---------------------------------------|
-| ![](screenshots/01_player.png)      | ![](screenshots/02_preferences.png) | ![](screenshots/03_subscriptions.png) |
-| ![](screenshots/04_description.png) | ![](screenshots/05_preferences.png) | ![](screenshots/06_subscriptions.png) |
+This fork is not primarily being built for public instances but should still work. I'm adding features that I use for my selfhosted version.
 
-This version is built for my wants and needs but happy to take requests.
 
 ## Features
 
