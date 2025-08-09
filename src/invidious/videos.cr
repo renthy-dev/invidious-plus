@@ -192,6 +192,27 @@ struct Video
     }
   end
 
+  def chapters : Array(VideoChapter)
+    chapters_json = info["chapters"]?.try &.as_a || [] of JSON::Any
+    return chapters_json.map do |chapter_json|
+      VideoChapter.new(
+        title: chapter_json["title"]?.try &.as_s || "",
+        start_time: chapter_json["startTime"]?.try &.as_i64 || 0_i64,
+        thumbnail: chapter_json["thumbnail"]?.try &.as_s
+      )
+    end
+  end
+
+  def chapters=(value : Array(VideoChapter))
+    info["chapters"] = JSON::Any.new(value.map do |chapter|
+      JSON::Any.new({
+        "title" => JSON::Any.new(chapter.title),
+        "startTime" => JSON::Any.new(chapter.start_time.to_i64),
+        "thumbnail" => chapter.thumbnail ? JSON::Any.new(chapter.thumbnail.not_nil!) : JSON::Any.new(nil)
+      }.compact)
+    end)
+  end  
+
   # Macros defining getters/setters for various types of data
 
   private macro getset_string(name)

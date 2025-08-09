@@ -82,8 +82,16 @@
     "title" => video.title,
     "description" => HTML.escape(video.short_description),
     "thumbnail" => thumbnail,
-    "preferred_caption_found" => !preferred_captions.empty?
+    "preferred_caption_found" => !preferred_captions.empty?,
+    "chapters" => video.chapters.map do |chapter|
+      {
+        "title" => chapter.title,
+        "startTime" => chapter.start_time,
+        "thumbnail" => chapter.thumbnail
+      }
+    end
 }.to_pretty_json
 %>
 </script>
 <script src="/js/player.js?v=<%= ASSET_COMMIT %>"></script>
+<script src="/js/chapters.js?v=<%= ASSET_COMMIT %>"></script>

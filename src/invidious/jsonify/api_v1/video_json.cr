@@ -233,6 +233,23 @@ module Invidious::JSONify::APIv1
         end
       end
 
+      # Add chapters field to the JSON output
+      if !video.chapters.empty?
+        json.field "chapters" do
+          json.array do
+            video.chapters.each do |chapter|
+              json.object do
+                json.field "title", chapter.title
+                json.field "startTime", chapter.start_time
+                if chapter.thumbnail
+                  json.field "thumbnail", chapter.thumbnail
+                end
+              end
+            end
+          end
+        end
+      end
+
       json.field "recommendedVideos" do
         json.array do
           video.related_videos.each do |rv|
