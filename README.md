@@ -70,10 +70,9 @@ This version is built for my wants and needs but happy to take requests.
 
 **PLUS features**
 - Video chapters (Button located next to CC on video player bar)
-- Sponsorblock
+- Sponsorblock - (For it to work, you will need to add "https://sponsor.ajay.app" to your CSP policy in Caddy/Nginx.)
 - Redesigned UI
 -
-- 
 
 **User features**
 - Lightweight
