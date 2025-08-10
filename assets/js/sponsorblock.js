@@ -293,7 +293,6 @@ var sponsorblock = (function() {
 })();
 
 addEventListener('load', function() {
-    // Initialize immediately on page load for better UX
     if (window.location.pathname.includes('/watch')) {
         sponsorblock.init();
     }
@@ -305,7 +304,6 @@ setInterval(() => {
         lastUrl = window.location.href;
         sponsorblock.reset();
         if (window.location.pathname.includes('/watch')) {
-            // Initialize immediately on navigation for better UX
             sponsorblock.init();
         }
     }

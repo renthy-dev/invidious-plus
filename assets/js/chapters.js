@@ -1,4 +1,4 @@
-// Simple working chapters integration for Invidious VideoJS
+// Chapters integration
 
 (function() {
     'use strict';

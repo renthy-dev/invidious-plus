@@ -2116,3 +2116,80 @@ textarea:focus {
 .light-theme .chapters-btn:hover {
     color: #075A9E !important;
 }
+
+/* Mini-Player */
+
+#mini-player .mini-player-header {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#mini-player:hover .mini-player-header {
+    opacity: 1;
+}
+
+#mini-player .resize-handle {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#mini-player:hover .resize-handle {
+    opacity: 1;
+}
+
+#mini-player .vjs-progress-control {
+    flex: 1 1 auto !important;
+    margin: 0 4px !important;
+    min-width: 60px !important;
+    max-width: calc(100% - 120px) !important;
+}
+
+#mini-player .vjs-control-bar {
+    display: flex !important;
+    /* align-items: center !important; This causes the progress bar to overlap the other icons.  */
+    justify-content: flex-start !important;
+    padding: 0 4px !important;
+    gap: 2px !important;
+    height: 36px !important;
+    box-sizing: border-box !important;
+}
+
+#mini-player .vjs-play-control {
+    width: 36px !important;
+    min-width: 36px !important;
+    flex-shrink: 0 !important;
+}
+
+#mini-player .vjs-fullscreen-control {
+    width: 36px !important;
+    min-width: 36px !important;
+    flex-shrink: 0 !important;
+}
+
+#mini-player .vjs-volume-panel {
+    width: 36px !important;
+    min-width: 36px !important;
+    flex-shrink: 0 !important;
+}
+
+.miniplayer-toggle-btn {
+    order: 20 !important;
+}
+
+.vjs-playback-rate {
+    order: 19 !important; 
+}
+
+.vjs-fullscreen-control {
+    order: 21 !important;
+}
+
+@media screen and (max-width: 768px) {
+    #mini-player .vjs-volume-panel {
+        display: none !important;
+    }
+    
+    #mini-player .vjs-progress-control {
+        max-width: calc(100% - 84px) !important;
+    }
+}
